@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "jweichler:build:production"
+              "buildTarget": "jweichler:build:production"
             },
             "development": {
-              "browserTarget": "jweichler:build:development"
+              "buildTarget": "jweichler:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "jweichler:build"
+            "buildTarget": "jweichler:build"
           }
         },
         "test": {
