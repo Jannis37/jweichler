@@ -1,0 +1,16 @@
+<div class="min-h-screen flex items-center justify-center bg-slate-700 text-white">
+    <div class="text-center">
+        <h1 class="reveal-text text-3xl font-bold mb-4">
+            <span *ngFor="let letter of textArray; let i = index" [style.animationDelay]="i * 0.1 + 's'">
+                <div *ngIf="letter != ' ' else emptyString">
+                    {{letter}}
+                </div>
+                <ng-template #emptyString>
+                    &nbsp;
+                </ng-template>
+            </span>
+        </h1>
+        <p class="text-xl italic">"Success is not final, failure is not fatal: It is the courage to continue that
+            counts."</p>
+    </div>
+</div>

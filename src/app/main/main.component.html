@@ -1,0 +1,14 @@
+<header
+    class="px-6 w-full py-2 bg-slate-700 text-white shadow-md fixed top-0 flex justify-between items-center rounded-md">
+    <button class="text-xl font-semibold hover:text-blue-500" (click)="setComponentName(COMPONENTS.ABOUTME)">Jannis Weichler</button>
+    <div>
+        <button class="mx-2 text-l font-semibold p-2 hover:text-blue-500" (click)="setComponentName(COMPONENTS.ABOUTME)">About me</button>
+        <button class="mx-2 text-l font-semibold p-2 hover:text-blue-500" (click)="setComponentName(COMPONENTS.QUOTE)">Quote</button>
+        <button class="mx-2 text-l font-semibold p-2 hover:text-blue-500">Login</button>
+        <button class="mx-2 text-l font-semibold p-2 hover:text-blue-500">Toggle Theme</button>
+    </div>
+</header>
+
+<div class="px-6 py-2 min-h-screen pt-20 bg-slate-700 text-white">
+    <ng-container *ngComponentOutlet="getComp()"></ng-container>     
+</div>

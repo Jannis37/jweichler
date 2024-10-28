@@ -1,0 +1,17 @@
+.reveal-text span {
+    opacity: 0;
+    display: inline-block;
+    transform: translateX(-10px);
+    animation: appear 0.5s forwards;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
