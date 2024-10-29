@@ -1,0 +1,10 @@
+<h1 class="reveal-text text-3xl font-bold mb-4">
+    <span *ngFor="let letter of text; let i = index" [style.animationDelay]="i * 0.1 + 's'">
+        <div *ngIf="letter != ' ' else emptyString">
+            {{letter}}
+        </div>
+        <ng-template #emptyString>
+            &nbsp;
+        </ng-template>
+    </span>
+</h1>

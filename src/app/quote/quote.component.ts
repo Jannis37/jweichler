@@ -1,18 +1,17 @@
-import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { MovingTextComponent } from "../moving-text/moving-text.component";
 
 @Component({
   selector: 'app-quote',
   standalone: true,
   imports: [
-    CommonModule
-  ],
+    MovingTextComponent
+],
   templateUrl: './quote.component.html',
   styleUrl: './quote.component.scss'
 })
 export class QuoteComponent {
-  textArray = "Quote of the day".split("");
   
   constructor(private http: HttpClient) {}
 
@@ -21,6 +20,5 @@ export class QuoteComponent {
       console.log(res);
     });
     console.log('I am clicked!');
-    console.log(this.textArray);
   }
 }

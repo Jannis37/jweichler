@@ -16,9 +16,11 @@ enum COMPONENTS {
   styleUrl: './main.component.scss',
 })
 export class MainComponent {
-  COMPONENTS = COMPONENTS
+  COMPONENTS = COMPONENTS;
 
-  private componentName = COMPONENTS.ABOUTME
+  private componentName = COMPONENTS.ABOUTME;
+
+  darkMode = true;
 
   getComp() {
     switch(this.componentName) {
@@ -35,5 +37,16 @@ export class MainComponent {
     this.componentName = name;
   }
 
+  toggleTheme() {
+    this.darkMode = !this.darkMode;
+    console.log(this.darkMode);
+  }
 
+
+  setDarkLightMode() {
+    return {
+      'bg-slate-700 text-white': this.darkMode,
+      'bg-slate-200 text-black': !this.darkMode
+    };
+  }
 }
